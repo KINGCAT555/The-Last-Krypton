@@ -1,0 +1,37 @@
+{
+  "name": "krypton-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node src/bot.js\" \"node src/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KangKung02/Krypton-Server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KangKung02/Krypton-Server/issues"
+  },
+  "homepage": "https://github.com/KangKung02/Krypton-Server#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "concurrently": "^7.0.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^12.0.3",
+    "express-rate-limit": "^6.1.0",
+    "express-useragent": "^1.0.15",
+    "helmet": "^5.0.1",
+    "js-sha256": "^0.9.0",
+    "mongodb": "^4.3.0",
+    "mongoose": "^6.1.6",
+    "node-rsa": "^1.1.1",
+    "tls": "^0.0.1",
+    "websocket": "^1.0.34"
+  }
+}
