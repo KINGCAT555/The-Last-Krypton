@@ -15,31 +15,31 @@ game:GetService("Players").LocalPlayer.Idled:Connect(function()
 end)
 
 local Global_V = {}
-pcall(function()
-    local req = (syn and syn.request) or (http and http.request) or request;
-    local GetDataFormServer = req({
-        Url = 'http://kangisloser.xyz/GetData',
-        Method = 'POST',
-        Headers = {
-            ["Content-Type"] = "application/json"
-        };
-        Body = game:GetService('HttpService'):JSONEncode({
-            GameId = tostring(game.PlaceId)
-        }),
-    })
-    local Body = game:GetService("HttpService"):JSONDecode(GetDataFormServer.Body)
-    Global_V = {
-        Version_script = Body.Version,
-        Script_enabled = Body.ScriptEnabled
-    }
-end)
+-- pcall(function()
+--     local req = (syn and syn.request) or (http and http.request) or request;
+--     local GetDataFormServer = req({
+--         Url = 'http://kangisloser.xyz/GetData',
+--         Method = 'POST',
+--         Headers = {
+--             ["Content-Type"] = "application/json"
+--         };
+--         Body = game:GetService('HttpService'):JSONEncode({
+--             GameId = tostring(game.PlaceId)
+--         }),
+--     })
+--     local Body = game:GetService("HttpService"):JSONDecode(GetDataFormServer.Body)
+--     Global_V = {
+--         Version_script = Body.Version,
+--         Script_enabled = Body.ScriptEnabled
+--     }
+-- end)
 
-if getgenv().IsKangDev == "Haachamaissocute!" then
+-- if getgenv().IsKangDev == "Haachamaissocute!" then
     Global_V = {
         Version_script = "0.0.0 [In Development]";
         Script_enabled = true;
     }
-end
+-- end
 if not Global_V.Script_enabled then
     return game.Players.LocalPlayer:Kick("Script was disabled.")
 end
@@ -52,7 +52,7 @@ Cache.DevConfig["ListOfMonter"] = game:GetService("HttpService"):JSONDecode(game
 Cache.DevConfig["ListOfRareDveilFruit"] = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/KangKung02/just-bin/main/OPL_LF.json"));
 Cache.DevConfig["ListOfDveilFruit"] = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/KangKung02/just-bin/main/OPL_ALF.json"));
 Cache.DevConfig["ListOfMods"] = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/KangKung02/just-bin/main/OPL_ML.json"));
-Cache.DevConfig["FindFruitArgumet"] = loadstring(game:HttpGet"http://kangisloser.xyz/public/api/UWU.lua")();
+Cache.DevConfig["FindFruitArgumet"] = loadstring(game:HttpGet"https://raw.githubusercontent.com/KangKung02/The-Last-Krypton/master/Back-End/src/public/api/UWU.lua")();
 Cache.DevConfig["ListOfBox"] = {"Common Box", "Uncommon Box", "Rare Box", "Ultra Rare Box"};
 Cache.DevConfig["ListOfRareBox"] = {"Rare Box", "Ultra Rare Box"};
 Cache.DevConfig["ListOfKeySkill"] = {"Z", "X", "C", "V", "B", "N", "F", "G", "H", "J", "K", "L"};
