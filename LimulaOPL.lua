@@ -350,7 +350,7 @@ do
             
             
             local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/KangKung02/H2O/main/Flux_Ui.lua")();
-            local win = Flux:Window("Krypton Premium", "                  version : "..Global_V.Version_script, Color3.fromRGB(33, 30, 207), Enum.KeyCode.RightControl)
+            local win = Flux:Window("Limula Premium", "                  version : "..Global_V.Version_script, Color3.fromRGB(33, 30, 207), Enum.KeyCode.RightControl)
             Ui_Tab["Farming beri"] = win:Tab("Farming beri", "http://www.roblox.com/asset/?id=6756586445")
             
             Ui_Tab["Farming beri"]:Label("⭐ Player 1 gives life for Player 2 ⭐")
@@ -2217,11 +2217,11 @@ do
             
             Ui_Tab["Credit"] = win:Tab("Credit", "http://www.roblox.com/asset/?id=6756586445")
             Ui_Tab["Credit"]:Line()
-            Ui_Tab["Credit"]:Label("⭐ Credit To Kang Yes Only Kang 😢 ⭐")
-            Ui_Tab["Credit"]:Label("Made By : Kang Kung#7271")
-            Ui_Tab["Credit"]:Label("Discord : https://discord.gg/B659FscCBz")
+            Ui_Tab["Credit"]:Label("⭐ Credit Sinestrea ⭐")
+            Ui_Tab["Credit"]:Label("Made By : Śiňesťrĕa#2369")
+            Ui_Tab["Credit"]:Label("Discord : https://discord.gg/Gubid")
             Ui_Tab["Credit"]:Button("Copy","Copy This Link.", function()
-                setclipboard("https://discord.gg/B659FscCBz")
+                setclipboard("https://discord.gg/Gubid")
                 local req = (syn and syn.request) or request
                 req({
                     Url = "http://127.0.0.1:6463/rpc?v=1",
@@ -2233,7 +2233,7 @@ do
                     Body = game:GetService("HttpService"):JSONEncode({
                         cmd = "INVITE_BROWSER",
                         args = {
-                            code = "B659FscCBz"
+                            code = "Gubid"
                         },
                         nonce = game:GetService("HttpService"):GenerateGUID(false)
                     }),
